@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/registro-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro - HUSR E.S.E</title>
+</head>
+
+<header>
+    <div class="H-izquierda">
+        <h1>Hospital Universitario San Rafael E.S.E</h1>
+    </div>
+    <div class="H-derecha">
+        <form action="" method="GET">
+            <input type="search" class="txt-buscar" id="txt-buscar" name="txt-buscar" placeholder="Busqueda">
+            <input type="button" class="btn-buscar" id="btn-buscar" name="btn-buscar" value="Buscar">
+        </form>
+    </div>
+</header>
+<body>
+    <section class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+      </section>
+    <form action="login" method="POST">
+        <div class="registro">
+            <h2>FORMULARIO DE REGISTRO</h2>
+            <div class="content">
+                <!-- INFORMACION PERSONAL -->
+                <h3 class="subtitulo">Información personal</h3>
+                <p class="parrafo">Nombres:</p>
+                <input type="text" class="campotxt" name="nombres" id="nombres" placeholder="Nombres">
+                <p class="parrafo">Apellidos:</p>
+                <input type="text" class="campotxt" name="apellidos" id="apellidos" placeholder="Apellidos">
+                <p class="parrafo">Tipo de documento:</p>
+                <select name="tipo_doc" id="tipo_doc" class="campotxt">
+                    <option value="sisben">Sisben</option>
+                    <option value="tarjeta de identidad">Tarjeta de identidad</option>
+                    <option value="cedula de ciudadania" selected>Cedula de ciudadania</option>
+                </select>
+                <p class="parrafo">Numero de documento:</p>
+                <input type="number" class="campotxt" name="num_doc" id="num-doc" placeholder="Numero de documento">
+                <p class="parrafo">Fecha de nacimiento:</p>
+                <input type="date" class="campotxt" name="fechanacimiento" id="fechanacimiento">
+                <p class="parrafo">Sexo:</p>
+                <input type="radio" name="sexo" id="sexo-m" class="sexo" value="masculino">
+                <Label for="sexo-m">Masculino</Label>
+                <br>
+                <input type="radio" name="sexo" id="sexo-f" class="sexo" value="femenino">
+                <Label for="sexo-f">Femenino</Label>
+                
+
+                <!-- INFORMACION DE CONTACTO -->
+                <h3 class="subtitulo">Información de contacto</h3>
+                <p class="parrafo">Correo:</p>
+                <input type="text" class="campotxt" name="email" id="email" placeholder="Correo electrónico">
+                <p class="parrafo">Departamento:</p>
+                <select name="departamento" id="departamento" class="campotxt">
+                    <option value="departamento">Departamento</option>
+                </select>
+                <p class="parrafo">Ciudad-Municipio:</p>
+                <select name="ciudad_municipio" id="ciudad-municipio" class="campotxt">
+                    <option value="cuidad municipio">Ciudad-Municipio</option>
+                </select>
+                <p class="parrafo">Dirección:</p>
+                <input type="text" class="campotxt" name="direccion" id="direccion" placeholder="Dirección">
+                <p class="parrafo">Celular:</p>
+                <input type="number" class="campotxt" name="celular" id="celular" placeholder="Celular">
+                <p class="parrafo">Teléfono fijo:</p>
+                <input type="number" class="campotxt" name="telefono" id="telefono" placeholder="Telefono">
+                <br>
+                <input type="checkbox" name="tyc" id="tyc" class="tyc"><a href="#">Acepto los Terminos y Condiciones</a>
+                <input type="submit" class="btn-registrar" id="btn-registrar" name="btn-registrar" value="Registrarse">
+            </div>            
+        </div>
+    </form>
+</body>
+<footer>
+    <h4>Todos los derechos reservados</h3>
+</footer>
+</html>

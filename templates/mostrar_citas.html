@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style_citas.css') }}"/>
+    <meta charset="UTF-8">
+    <title>Hospital Universitario San Rafael</title>
+</head>
+
+<body>
+    <header>
+        <section id="bienvenido">
+            Bienvenido(a)
+        </section>
+        <a href="/cerrar_sesion">Cerrar Sesión</a>
+        <section>            
+            <h1 id="oficina_v">Oficina Virtual</h1>                       
+            <h1 id="titulo">Hospital Universitario San Rafael ESE</h1>
+        </section>
+    </header>
+
+    <div id="Container_CM_U-CC">
+        <h2>Citas Medicas</h2>
+        <h3>"Usuario"-"Cedula"</h3>
+    </div>
+    <article>
+        {% if contact == []%}
+        <h2>No hay citas agendadas</h2>
+        {%else%}
+            <table class="table">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cedula</th>
+                    <th>Especialidad</th>
+                    <th>Fecha</th>
+                    <th>Detalles</th>
+                </tr>
+
+                <tbody>                    
+                    {% for i in contact %}
+                        <tr>
+                            <td>{{i.1}}</td>
+                            <td>{{i.7}}</td>
+                            <td>{{i.3}}</td>
+                            <td>{{i.4}}</td>
+                            <td>
+                                <a href="/detalles_de_cita/{{i.0}}"> Detalles </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+        {%endif%}            
+        </table>
+    </article>
+</body>
+<footer>
+    <section>
+        <a href="mailto:">Contactanos</a>
+    </section>
+    <p>@Copyrigth 2021 - Derechos reservados.</p>
+    <p>Cualquier uso de este sitio constituye su aceptacion y conformidad de los terminos, condiciones y Politica de privacidad.</p>
+</footer>
+</html>

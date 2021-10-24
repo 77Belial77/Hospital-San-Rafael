@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../static/css/perfil.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil-usuario-clinica</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+    <section class="seccion-perfil-usuario">
+        <div class="perfil-usuario-header">
+            <div class="perfil-usuario-portada">
+                <div class="perfil-usuario-avatar">
+                    <img src="https://img.icons8.com/ios-glyphs/480/000000/user-male--v1.png"/>                    <button type="button" class="boton-avatar">
+                        <i class="far fa-image"></i>
+                       
+                    </button>
+                </div>
+                <button type="button" class="boton-portada">
+                <a class="boton" href="/dashboard" method = "POST" target="">
+                    <i class="fa fa-heartbeat"aria-hidden="true"></i>Menú
+                </a>
+                </button>
+                <a href="/cerrar_sesion">Cerrar Sesión</a>
+            </div>
+        </div>
+        <div class="perfil-usuario-body">
+            <div class="perfil-usuario-bio">
+                <h3 class="titulo">{{contact.0}} {{contact.1}}</h3>
+            </div>
+            <div class="perfil-usuario-footer">
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-phone-alt"></i>Número de documento: {{contact.3}}</li>   
+                        <li><i class="icono fas fa-briefcase"></i>Fecha de nacimiento: {{contact.4}}</li>   
+                        <li><i class="icono fas fa-building"></i>Sexo: {{contact.5}}</li>
+                        <li><i class="icono fas fa-map-marker-alt"></i>Correo: {{contact.6}}</li>
+                    </ul>
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-calendar-alt"></i>Reside en: {{contact.7}} {{contact.8}} {{contact.9}}</li>
+                        <li><i class="icono fas fa-user-check"></i>Celular: {{contact.10}}</li>
+                        <li><i class="icono fas fa-share-alt"></i>Teléfono fijo: {{contact.11}}</li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+</html>

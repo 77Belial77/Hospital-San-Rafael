@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/cita_detalles.css') }}"/>
+    <meta charset="UTF-8">
+    <title>Hospital Universitario San Rafael</title>
+</head>
+
+<body>
+    <header>
+        <section id="bienvenido">
+            Bienvenido(a)
+        </section>
+        <a href="/cerrar_sesion">Cerrar Sesión</a>
+        <section>            
+            <h1 id="oficina_v">Oficina Virtual</h1>                       
+            <h1 id="titulo">Hospital Universitario San Rafael ESE</h1>
+        </section>
+    </header>
+
+    <section class="Container">
+        <h2>Detalles de la Cita</h2>
+        <h3>"Usuario"-"Cedula"</h3>
+    </section>
+    <section class="Container">
+        <article>
+            {% if contact == null%}
+            <p>ID de la cita</p>
+            <input type="text" class="btn" id="txt_id_cita" readonly="readonly"/>
+            <p>Especialidad</p>
+            <input type="text" class="btn" id="txt_especialidad" readonly="readonly"/>
+            <p>Nombre del especialista</p>
+            <input type="text" class="btn" id="txt_especialista" readonly="readonly"/>
+            <p>Fecha de la cita</p>
+            <input type="text" class="btn" id="txt_fecha_de_la_cita" readonly="readonly"/>
+            <p>Sede</p>
+            <input type="text" class="btn" id="txt_sede" readonly="readonly"/>
+            <p>Ubicacion</p>
+            <input type="text" class="btn" id="txt_ubicacion" readonly="readonly"/><br>
+
+            
+            {%else%}
+                {% for i in contact%}
+                <p>ID de la cita</p>
+                <input type="text" class="btn" id="txt_id_cita" value={{i.0}} readonly="readonly"/>
+                <p>Especialidad</p>
+                <input type="text" class="btn" id="txt_especialidad" value={{i.2}} readonly="readonly"/>
+                <p>Nombre del especialista</p>
+                <input type="text" class="btn" id="txt_especialista" value={{i.6}} readonly="readonly"/>
+                <p>Fecha de la cita</p>
+                <input type="text" class="btn" id="txt_fecha_de_la_cita" value={{i.3}} readonly="readonly"/>
+                <p>Sede</p>
+                <input type="text" class="btn" id="txt_sede" value={{i.4}} readonly="readonly"/>
+                <p>Ubicacion</p>
+                <input type="text" class="btn" id="txt_ubicacion" value={{i.5}} readonly="readonly"/><br>
+                
+                <a href='/Delete/{{i.0}}'>Cancelar cita</a>   
+                {% endfor %}
+            {%endif%}           
+
+
+        </article>
+    </section>
+</body>
+<footer>
+    <section>
+        <a href="mailto:">Contactanos</a>
+    </section>
+    <p>@Copyrigth 2021 - Derechos reservados.</p>
+    <p>Cualquier uso de este sitio constituye su aceptacion y conformidad de los terminos, condiciones y Politica de privacidad.</p>
+</footer>
+</html>

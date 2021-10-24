@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/login-style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión - HUSR E.S.E</title>
+</head>
+
+<header>
+    <div class="H-izquierda">
+        <h1>Hospital Universitario San Rafael E.S.E</h1>
+    </div>
+    <div class="H-derecha">
+        <form action="" method="POST">
+            <input type="search" class="txt-buscar" id="txt-buscar" name="txt-buscar" placeholder="Busqueda">
+            <input type="button" class="btn-buscar" id="btn-buscar" name="btn-buscar" value="Buscar">
+        </form>
+    </div>
+</header>
+<body>
+    <section class="content">
+        {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div>
+        {% endfor %}
+    </section>
+    <form action="dashboard" method="POST">
+        <div class="login">
+            <h2>LOGIN</h2>
+            <input type="text" class="campotxt" name="username" id="txt-username" placeholder="Usuario">
+            <input type="password" class="campotxt" name="password" id="txt-contraseña" placeholder="Contraseña">
+            <input type="submit" class="btn-login" id="btn-login" name="btn-login" value="Ingresar">
+            <div class="links">
+                <a href="#" class="olvcontra">Olvidé mi contraseña</a>
+                <a href="/registro" class="registrarme">Registrarme</a>
+            </div>
+        </div>
+    </form>
+</body>
+<footer>
+    <h4>Todos los derechos reservados</h3>
+</footer>
+</html>

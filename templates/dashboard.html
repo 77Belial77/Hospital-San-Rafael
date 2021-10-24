@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/admin-style.css"/>
+    <meta charset="UTF-8">
+    <title>Hospital Universitario San Rafael</title>
+</head>
+
+<body>
+    <header>
+        <section id="bienvenido">
+            Bienvenido(a)
+        </section>
+        <a href="/cerrar_sesion">Cerrar Sesión</a>
+        <section>            
+            <h1 id="oficina_v">Oficina Virtual</h1>                       
+            <h1 id="titulo">Hospital Universitario San Rafael ESE</h1>
+        </section>
+    </header>
+
+
+    <article>
+        <div id="nav">
+        <div class="sidenav">
+        <img src="https://lh6.googleusercontent.com/-5Per1JDtzvg/AAAAAAAAAAI/AAAAAAAACM0/4RdieFHJWMI/photo.jpg?sz=328" alt="user">
+            <a href="/perfil/{{session['nom_user']}}">Perfil</a>
+            <a href="/mostrar_citas/{{session['nom_user']}}">Citas</a>
+        </div>
+        
+            </tr>
+        </table>
+    </article>
+</body>
+<footer>
+    <section>
+        <a href="mailto:">Contactanos</a>
+    </section>
+    <p>@Copyrigth 2021 - Derechos reservados.</p>
+    <p>Cualquier uso de este sitio constituye su aceptacion y conformidad de los terminos, condiciones y Politica de privacidad.</p>
+</footer>
+</html>

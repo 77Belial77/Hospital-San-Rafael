@@ -1,0 +1,108 @@
+html {
+    min-height: 100%;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #efefef;
+}
+
+header {
+    background-color: #fff;
+} 
+
+section h1 {
+    color: #01AEC7;
+}
+
+#bienvenido{
+    padding: 0.2rem 0.5rem;
+    font-size:0.7rem;
+    text-align:right;
+    background-color:#60eaf68c;
+    color: #01AEC7;
+}
+
+#titulo {
+    padding-left: 3rem;
+    text-align:left;
+    background-color: #fff;
+    border-bottom: solid 0.5px #01AEC7;
+}
+
+#oficina_v{
+    margin:0;
+    float: right;
+    padding-right:0.5rem;
+}
+
+div h2{
+    margin:0;
+    color: #01AEC7;
+}
+
+div h3{
+    margin:0;
+    color: #51d1f6;
+}
+
+article{
+    height: 21.15rem;
+} 
+
+#Container_CM_U-CC{
+    margin: 0 auto;
+    width: 800px;
+}
+
+article table{
+    margin: 0;
+}
+
+.table{
+    width:800px;
+    margin: 50px auto;
+    background-color:#fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.3);
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td{
+    border: solid 1px #eee;
+}
+
+th{
+    background-color: #01AEC7;
+}
+
+
+footer{
+    background-color: #01AEC7;
+    padding: 3rem;
+    color: white;
+}
+
+footer section{
+    float: right;
+}
+
+footer p{
+    font-size: 0.5rem;
+    margin: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    color:cornflowerblue;
+}
